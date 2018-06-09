@@ -1,0 +1,77 @@
+/* ------------------------------------ *\
+    #Useful Sass Helper Functions
+\* ------------------------------------ */
+
+/**
+ * Truncate text after certain length to ...
+ */
+@mixin truncate($maxLength) {
+  max-width: $maxLength;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**
+ * CSS Media Query Helper
+ */
+@mixin mq($width, $type: min) {
+  @if map-has-key($map: $breakpoints, $key: $width) {
+    $width: map-get($map: $breakpoints, $key: $width);
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+/**
+ * Psuedo Selector Helper
+ */
+@mixin psuedo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+/* ------------------------------------ *\
+    $Flex Helpers
+\* ------------------------------------ */
+
+/**
+ * Center Vertically and Horizontally
+ */
+@mixin centerFully() {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------------ *\
+    $Type Helpers
+\* ------------------------------------ */
+
+/**
+ * Set Header Size and LineHeight
+ */
+@mixin heading($margin-bottom: var(--spacing)) {
+  letter-spacing: 0.3px;
+  margin-bottom: $margin-bottom;
+  position: relative;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+/**
+* Add Underline to Headers
+*/
+@mixin underline() {
+  &::after {
+    background-color: var(--primary-color);
+    bottom: -8px;
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 1em;
+  }
+}

@@ -1,0 +1,23 @@
+/* ------------------------------------ *\
+    #Site Colors Variables
+\* ------------------------------------ */
+
+:root {
+  // Theme colors
+  --primary-color: #17b890;
+  --primary-dark-color: #199676;
+
+  // Text color
+  --body-text-color: #dee5e5;
+
+  // Background colors
+  --primary-bg: #182025;
+
+  // Warning colors
+  --error: #d05353;
+
+  // Links
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--primary-dark-color);
+  --link-transition: 0.5s ease-out;
+}

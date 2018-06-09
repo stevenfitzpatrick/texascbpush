@@ -1,0 +1,15 @@
+/* ------------------------------------ *\
+    #Typography Styles
+\* ------------------------------------ */
+
+* {
+  line-height: var(--body-line-height);
+}
+
+/**
+ * Margin and Paddings
+ */
+p,
+div[role='alert'] {
+  margin-bottom: var(--spacing);
+}
