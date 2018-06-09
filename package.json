@@ -105,9 +105,7 @@
     "url": "git+https://github.com/stevenfitzpatrick/texascbpush.git"
   },
   "lint-staged": {
-    "src/**/?(*)(Test).js": [
-
-    ],
+    "src/**/?(*)(Test).js": [],
     "*.{js,jsx}": [
       "prettier --write",
       "eslint --fix",
